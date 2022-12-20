@@ -15,8 +15,6 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(\App\Models\Restaurant\Table::class);
-            $table->foreignIdFor(\App\Models\Restaurant\Bill::class);
             $table->timestamps();
         });
     }

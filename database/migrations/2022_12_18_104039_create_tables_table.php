@@ -15,9 +15,6 @@ return new class extends Migration
     {
         Schema::create('tables', function (Blueprint $table) {
             $table->id();
-            $table->integer('chairs');
-            $table->boolean('occupied');
-            $table->char('description', 255);
             $table->timestamps();
         });
     }

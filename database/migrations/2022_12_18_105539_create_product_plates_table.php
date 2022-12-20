@@ -15,8 +15,6 @@ return new class extends Migration
     {
         Schema::create('product_plates', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(\App\Models\Restaurant\Plate::class);
-            $table->foreignIdFor(\App\Models\Inventory\Product::class);
             $table->timestamps();
         });
     }

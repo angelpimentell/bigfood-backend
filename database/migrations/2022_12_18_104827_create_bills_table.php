@@ -15,10 +15,6 @@ return new class extends Migration
     {
         Schema::create('bills', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(\App\Models\Users\User::class);
-            $table->char('description', 255);
-            $table->float('total_to_pay');
-            $table->float('total_paid')->nullable();
             $table->timestamps();
         });
     }
