@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(\App\Models\Inventory\EquivalentUnit::class);
+            $table->char('name', 60);
+            $table->char('description', 255)->nullable();
+            $table->integer('units');
             $table->timestamps();
         });
     }

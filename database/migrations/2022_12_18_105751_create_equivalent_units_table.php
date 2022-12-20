@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('equivalent_units', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(\App\Models\Inventory\MeasurementUnit::class);
+            $table->foreignIdFor(\App\Models\Inventory\MeasurementUnit::class, 'equivalent_measurement_unit');
+            $table->float('equivalence');
             $table->timestamps();
         });
     }
