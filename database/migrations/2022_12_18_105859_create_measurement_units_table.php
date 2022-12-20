@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('measurement_units', function (Blueprint $table) {
             $table->id();
+            $table->char('name', 60);
+            $table->char('description', 255)->nullable();
             $table->timestamps();
         });
     }
