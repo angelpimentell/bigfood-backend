@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('plates', function (Blueprint $table) {
             $table->id();
+            $table->char('name', 60);
+            $table->char('description', 255)->nullable();
+            $table->float('price');
             $table->timestamps();
         });
     }

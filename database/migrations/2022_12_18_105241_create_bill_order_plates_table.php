@@ -14,8 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('bill_order_plates', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->foreignIdFor(\App\Models\Restaurant\Bill::class);
+            $table->foreignIdFor(\App\Models\Restaurant\Order::class);
+            $table->foreignIdFor(\App\Models\Restaurant\Plate::class);
         });
     }
 
