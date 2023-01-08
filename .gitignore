@@ -1,3 +1,4 @@
+# Laravel
 /node_modules
 /public/build
 /public/hot
@@ -17,4 +18,5 @@ yarn-error.log
 /.idea
 /.vscode
 
+# Docker
 docker-compose.yml
