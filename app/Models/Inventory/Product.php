@@ -10,10 +10,11 @@ class Product extends Model
     use HasFactory;
 
     /**
-     * Get the products for the BillOrderPlate.
+     * Get the equivalent unit associated with the product,
+     * a measurement unit used with this product.
      */
-    public function products()
+    public function equivalentUnit()
     {
-        return $this->hasMany(Product::class);
+        return $this->hasOne(EquivalentUnit::class);
     }
 }
